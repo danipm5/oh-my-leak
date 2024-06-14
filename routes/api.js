@@ -12,7 +12,7 @@ function verifyToken(req, res, next) {
         const bearerToken = bearerHeader.split(' ')[1]; // Dividir en el espacio y obtener el token
         req.token = bearerToken;
         // Aquí podrías agregar una verificación más compleja del token
-        if (bearerToken === "") { // Cambia esto por tu lógica de validación de tokens
+        if (bearerToken === "aqui_tu_token") { // Cambia esto por tu lógica de validación de tokens
             next(); // Continuar si el token es válido
         } else {
             res.sendStatus(403); // Forbidden
